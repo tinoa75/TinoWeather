@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TinoWeather</string>
+    <string name="add_location">Add location</string>
+    <string name="locations">Locations</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_location_dialog_title">Dodaj lokaciju</string>
+    <string name="unesi_grad">Unesi grad</string>
+</resources>
