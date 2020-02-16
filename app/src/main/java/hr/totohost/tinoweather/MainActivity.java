@@ -24,6 +24,13 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+
+// OpenWeatherMap API - Simulirati aplikaciju za prikaz temperature zraka i drugih osnovnih
+// meteoroloških podataka. Omogućiti automatsko dohvaćanje lokacije. Podržavati više lokacija
+// istovremeno, npr swipe-anjem ili pomoću navigation drawera.
+
+
+
 public class MainActivity extends AppCompatActivity {
 
     private final String LOCATION_PERMISSION = android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -93,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // trenutna lokacija
-        //adapter.addFragment(new WeatherFragment(lat, lng));
+         //  adapter.addFragment(new WeatherFragment(lat, lng));
 
         adapter.notifyDataSetChanged();
 
