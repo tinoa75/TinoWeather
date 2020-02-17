@@ -27,6 +27,13 @@ public class LocationsActivity extends AppCompatActivity {
     }
 
 
+//    @Override
+//    public void onViewCreated(MenuItem item) {
+ //}
+
+
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
@@ -46,13 +53,27 @@ public class LocationsActivity extends AppCompatActivity {
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         builder.setView(input);
 
+
+
         // Set up the buttons
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                String text = input.getText().toString();
-                new WeatherStore(LocationsActivity.this).addLocation(text);
-                locationsFragment.loadData();
+
+                // Input validation
+
+                if (input.getText().toString().trim().equals("")) {
+                    input.requestFocus();
+                }else {
+
+                    dialog.dismiss();
+                    String text = input.getText().toString();
+
+                    new WeatherStore(LocationsActivity.this).addLocation(text);
+                    locationsFragment.loadData();
+                }
+
+
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

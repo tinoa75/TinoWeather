@@ -26,6 +26,21 @@ class WeatherStore {
         tinydb.putListString(LOCATIONS_KEY, locations);
     }
 
+    // brisanje lokacije
+    void removeLocation(String location) {
+        ArrayList<String> locations = tinydb.getListString(LOCATIONS_KEY);
+
+        // ako nije prazno briši
+        if(locations != null) {
+
+            locations.remove(location);
+        }
+
+        tinydb.putListString(LOCATIONS_KEY, locations);
+    }
+
+
+
 
     ArrayList<String> getLocations() {
         return tinydb.getListString(LOCATIONS_KEY);

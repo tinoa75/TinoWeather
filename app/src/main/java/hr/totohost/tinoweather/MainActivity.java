@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // trenutna lokacija
-         //  adapter.addFragment(new WeatherFragment(lat, lng));
+         adapter.addFragment(new WeatherFragment(lat, lng));
 
         adapter.notifyDataSetChanged();
 
